@@ -1,0 +1,24 @@
+body {
+    /* Encriptador - 1 Desktop */
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    /* Light blue/light-blue-100 */
+    background: #F3F5FC;
+}
+
+header .logo {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
