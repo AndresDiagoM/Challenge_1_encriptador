@@ -55,15 +55,16 @@ main {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px; 
+    padding: 2px; 
     gap: 40px;
 
-    margin: 1em 1em 1em 1em;
+    margin: 2em 2em 2em 2em;
 }
 main .ingrese-texto {
     width: 50%;
-    height: 70%;
+    height: 80%;
     background-color: aqua;
+    margin: 4em 1em 0 5em;
 
     /* Dark blue/dark-blue-300 */
     color: #0A3871;
@@ -136,7 +137,7 @@ main .form-ingrese-texto .botones {
     height: 100px;
     left: 0px;
     top: 0px;
-    padding: 2em 0 0 0;
+    padding: 1em 0 0 0;
 }
 main .form-ingrese-texto .botones .boton-encriptar {
     width: 328px;
@@ -160,16 +161,39 @@ main .form-ingrese-texto .botones .boton-encriptar:hover {
     /* Dark blue/dark-blue-400 */
     background: #0A3871;
     border-radius: 24px;
-
-    /* White */
     color: #FFFFFF;
+    transform: scale(1.1);
+}
+main .form-ingrese-texto .botones .boton-desencriptar {
+    width: 328px;
+    height: 67px;
+
+    /* Light gray */
+    background: #D8DFE8;
+    /* Dark blue/dark-blue-300 */
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+}
+main .form-ingrese-texto .botones .boton-desencriptar:hover {
+    border-radius: 24px;
+    transform: scale(1.1);
 }
 
-main .texto-encriptado {
+main .contenedor-muñeco {
     width: 400px;
     height: 944px;
-    left: 1000px;
-    top: 40px;
+    margin: 0 0 0 2em;
 
     /* White */
     background: #FFFFFF;
@@ -177,8 +201,52 @@ main .texto-encriptado {
     /* shadow */
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-}
 
+    /*alinear verticalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main .contenedor-muñeco .muñeco {
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+
+    margin: 5em 0 2em 0;
+}
+main .contenedor-muñeco .mensaje-sin-texto{
+    width: 70%;
+    gap: 1em;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+    color: #343A40;
+}
+main .contenedor-muñeco .mensaje-sin-texto-p{
+    font-size: 24px;
+    line-height: 120%;
+
+    /* Gray/gray-500 */
+    color: #343A40;
+}
+main .contenedor-muñeco .mensaje-sin-texto-p2{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    
+    /* Gray/gray-400 */
+    color: #495057;
+}
 
 
 /*Footer de la página*/

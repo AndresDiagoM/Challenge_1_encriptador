@@ -1,3 +1,6 @@
+//Ocultar el <p> con el texto encriptado
+document.getElementById("texto-encriptado").style.display = "none";
+
 // Llamar a la funcion encriptar cuando se presione el boton "boton-encriptar"
 document.getElementById("boton-encriptar").addEventListener("click", function () {
     //evitar envio de formulario
@@ -16,5 +19,5 @@ document.getElementById("boton-encriptar").addEventListener("click", function ()
  * @param {string} texto Texto a encriptar
  */
 function encriptar(texto) {
-    
+
 }
