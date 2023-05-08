@@ -44,6 +44,30 @@ document.getElementById("boton-copiar").addEventListener("click", function () {
 });
 
 
+// Llamar a la funcion desencriptar cuando se presione el boton "boton-desencriptar"
+document.getElementById("boton-desencriptar").addEventListener("click", function () {
+    //evitar envio de formulario
+    event.preventDefault();
+
+    // Obtener el texto a desencriptar
+    var texto = document.getElementById("texto").value;
+
+    //si hay texto
+    if (texto != "") {
+        // Desencriptar el texto
+        var textoDesencriptado = desencriptar(texto);
+        //ocultar imagen del muñeco
+        document.getElementById("muñeco").style.display = "none";
+        //ocultar mensaje-sin-texto
+        document.getElementById("mensaje-sin-texto").style.display = "none";
+
+        // Mostrar el texto desencriptado
+        document.getElementById("texto-encriptado").style.display = "block";
+        document.getElementById("texto-encriptado").innerHTML = textoDesencriptado;
+        document.getElementById("boton-copiar").style.display = "block";
+    }
+});
+
 
 /**
  * Funcion para encriptar el texto
@@ -65,4 +89,26 @@ function encriptar(texto) {
     textoEncriptado = textoEncriptado.replace(/u/gi, "ufat");
 
     return textoEncriptado;
+}
+
+/**
+ * Funcion para desencriptar el texto
+ * @param {string} texto Texto a desencriptar
+ */
+function desencriptar(texto) {
+    /**
+     * Las "llaves" de encriptación que utilizaremos son las siguientes:
+        La letra "e" es convertida para "enter"
+        La letra "i" es convertida para "imes"
+        La letra "a" es convertida para "ai"
+        La letra "o" es convertida para "ober"
+        La letra "u" es convertida para "ufat"
+     */
+    var textoDesencriptado = texto.replace(/enter/gi, "e");
+    textoDesencriptado = textoDesencriptado.replace(/imes/gi, "i");
+    textoDesencriptado = textoDesencriptado.replace(/ai/gi, "a");
+    textoDesencriptado = textoDesencriptado.replace(/ober/gi, "o");
+    textoDesencriptado = textoDesencriptado.replace(/ufat/gi, "u");
+
+    return textoDesencriptado;
 }
