@@ -63,8 +63,8 @@ main {
 main .ingrese-texto {
     width: 50%;
     height: 80%;
-    background-color: aqua;
-    margin: 4em 1em 0 5em;
+    /* background-color: aqua; */
+    margin: 2em 1em 0 5em;
 
     /* Dark blue/dark-blue-300 */
     color: #0A3871;
@@ -79,7 +79,7 @@ main .form-ingrese-texto{
 main .form-ingrese-texto .texto {
     /*quitar borde y fondo del input*/
     border: none;
-    background: none;
+    background: transparent;
 
     font-family: 'Inter';
     font-style: normal;
@@ -90,6 +90,10 @@ main .form-ingrese-texto .texto {
 
     margin: 1em 2em 16em 2em ;
 }
+.texto[type="text"]:valid {
+    background-color: #F3F5FC;
+}
+
 main .form-ingrese-texto .texto:focus { 
     /* quitar */
     outline: none;
@@ -100,6 +104,7 @@ main .form-ingrese-texto .texto::placeholder {
     /* Dark blue/dark-blue-300 */
     color: #0A3871;
 }
+
 main .form-ingrese-texto .advertencia{
     display: flex;
     flex-direction: row;
@@ -131,7 +136,7 @@ main .form-ingrese-texto .botones {
     justify-content: center;
     gap: 24px;
 
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 
     width: 100%;
     height: 100px;
