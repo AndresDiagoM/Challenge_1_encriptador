@@ -252,6 +252,43 @@ main .contenedor-muñeco .mensaje-sin-texto-p2{
     /* Gray/gray-400 */
     color: #495057;
 }
+main .contenedor-muñeco .texto-encriptado{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    /* or 36px */
+
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+}
+main .contenedor-muñeco .boton-copiar {
+    margin: 3em 0 0 0;
+}
+main .contenedor-muñeco .boton-copiar-texto:hover {
+    /* Dark blue/dark-blue-400 */
+    border-radius: 24px;
+    transform: scale(1.1);
+}
+main .contenedor-muñeco .boton-copiar-texto:active {
+    /* Dark blue/dark-blue-400 */
+    border-radius: 24px;
+    transform: scale(1.15);
+}
+main .contenedor-muñeco .boton-copiar-texto {
+    width: 336px;
+    height: 67px;
+    left: 1032px;
+    top: 885px;
+
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
 
 
 /*Footer de la página*/

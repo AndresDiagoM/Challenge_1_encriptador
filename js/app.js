@@ -6,8 +6,9 @@ document.getElementById("texto").addEventListener("input", function () {
     document.getElementById("texto").value = textoSinCaracteresEspeciales;
 });
 
-//Ocultar el <p> con el texto encriptado
+//Ocultar el <p> con el texto encriptado y boton de copiar
 document.getElementById("texto-encriptado").style.display = "none";
+document.getElementById("boton-copiar").style.display = "none";
 
 // Llamar a la funcion encriptar cuando se presione el boton "boton-encriptar"
 document.getElementById("boton-encriptar").addEventListener("click", function () {
@@ -25,12 +26,24 @@ document.getElementById("boton-encriptar").addEventListener("click", function ()
         document.getElementById("muñeco").style.display = "none";
         //ocultar mensaje-sin-texto
         document.getElementById("mensaje-sin-texto").style.display = "none";
-        // Mostrar el texto encriptado
+        // Mostrar el texto encriptado y boton de copiar
         document.getElementById("texto-encriptado").style.display = "block";
         document.getElementById("texto-encriptado").innerHTML = textoEncriptado;
-        
+        document.getElementById("boton-copiar").style.display = "block";
     }
 });
+
+// Llamar a la funcion copiar cuando se presione el boton "boton-copiar"
+document.getElementById("boton-copiar").addEventListener("click", function () {
+    //evitar envio de formulario
+    event.preventDefault();
+    // Obtener el texto a copiar
+    var texto = document.getElementById("texto-encriptado").innerHTML;
+    // Copiar el texto en el portapapeles del sistema
+    navigator.clipboard.writeText(texto);
+});
+
+
 
 /**
  * Funcion para encriptar el texto
