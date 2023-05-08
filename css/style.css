@@ -87,7 +87,7 @@ main .form-ingrese-texto .texto {
     line-height: 150%;
     /* identical to box height, or 48px */
 
-    margin: 1em 2em 16em ;
+    margin: 1em 2em 16em 2em ;
 }
 main .form-ingrese-texto .texto:focus { 
     /* quitar */
@@ -99,6 +99,28 @@ main .form-ingrese-texto .texto::placeholder {
     /* Dark blue/dark-blue-300 */
     color: #0A3871;
 }
+main .form-ingrese-texto .advertencia{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    margin: 0 0 0 4em;
+}
+main .form-ingrese-texto .advertencia .advertencia-img{
+    width: 12px;
+    height: 12px;
+    /* background-color: blue; */
+}
+main .form-ingrese-texto .advertencia .mensaje{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    /* Gray/gray-400 */
+    color: #495057;
+    opacity: 0.8;
+}
+
 /*-- BOTONES -- */
 main .form-ingrese-texto .botones {
     /* Auto layout */
