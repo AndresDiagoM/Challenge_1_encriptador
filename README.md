@@ -4,7 +4,7 @@
 
 # Challenge Encriptador | Oracle + Alura
 <p align="center" >
-     <img src="">
+     <img src="./assets/img/readme.png">
 </p>
 
 <div align="center">
